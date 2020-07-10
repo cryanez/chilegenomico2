@@ -29,3 +29,4 @@ When downloading the code, you must create the missing "ancestry" directory, so 
 │   └── REF224_popinfo.csv
 └── README.txt
 
+In the inputs folder, currently the set used as reference set (REF224_SORT in plink format) for la estimación de ancestría en ventanas en muestras genotipadas por GT-SEQ is missing. If you want to use the script with the samples references used in the chilegenomco2 project, contact Cristian Yáñez, email: cristianyanez@med.uchile.cl
