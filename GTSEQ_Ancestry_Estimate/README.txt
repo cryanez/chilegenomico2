@@ -6,5 +6,7 @@
 # 2020-07-13
 ##########################################################################################
 
-Requerimientos:
+Requirements:
 Python2.7
+
+When downloading the code, you must create the following directories to estimate ancestry using this script
