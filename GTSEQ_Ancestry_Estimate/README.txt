@@ -78,7 +78,9 @@ REF224-RANDOM-SORT_CLG2.{bed, bim,fam}: Set en formato plink con los AIMS y las 
 Summary_ancestry_REF224-RANDOM-SORT_CLG2.csv: Métricas resumen de la estimación de ancestría por ventanas. Contiene las estimaciones de ancestría promedio, desviación y error estándar. Valores referencias otenidos del proyecto CLG1 y la significancia de la diferencia entre ambos resultados.
 
 
-*CLG2/temporal
+*CLG2/temporal: Carpeta donde se almacenan datos temporales
+
+
 
 
 
