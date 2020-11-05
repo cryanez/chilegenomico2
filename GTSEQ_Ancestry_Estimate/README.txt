@@ -35,8 +35,6 @@ When downloading the code, you must create the missing "ancestry" directory, so 
 │   └── REF224_popinfo.csv
 └── README.txt
 
-In the CLG2/input folder, currently the set used as reference set (REF224_SORT in plink format) for the estimation of ancestry in windows in samples genotyped by GT-SEQ is missing. If you want to use the script with the samples references used in the chilegenomco2 project, contact Cristian Yáñez, email: cristianyanez@med.uchile.cl
-
 Los datos de entrada para la estimación de ancestrías por ventanas de la carpeta "input" se deben solicitar a Cristian Yáñez, email: cristianyanez@med.uchile.cl. 
 La carpeta input contiene los siguientes archivos:
 
@@ -52,7 +50,13 @@ Las columnas son las siguientes: "ID_Interno", contiene el identificador de las 
 
 
 
+Explicación del contenido de la carpeta "ancestry". Esta carpeta debe ser creada siguendo las siguientes instrucciones:
 
+En la carpeta ancestry debe existir una carpeta por proyecto o set de datos al que se le estimará la ancestría en ventanas con la herramienta. En este caso tenemos la carpeta "ancestry/CLG2" que hace mencion al proyecto Chilegenomico2 (CLG2). Dentro de la carpeta del proyecto deben existir 3 carpetas:
+
+CLG2/input
+CLG2/output
+CLG2/temporal
 
 
 
