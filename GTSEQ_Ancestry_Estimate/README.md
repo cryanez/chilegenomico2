@@ -115,3 +115,9 @@ bash code/get_Ancestry.sh Name_Set_plink input/CLG2_Ancestry.tsv Project_folder_
 Example:
 bash code/get_Ancestry.sh CLG2 input/CLG2_Ancestry.tsv CLG2 PATH/CLG2_samples_GT-Seq
 ```
+El script en bash code/get_Ancestry.sh recibe los siguientes 4 argumentos de entrada:
+
+**Name_Set_plink:**
+**input/CLG2_Ancestry.tsv:**
+**Project_folder_name:**
+**Path_set_plink:**
