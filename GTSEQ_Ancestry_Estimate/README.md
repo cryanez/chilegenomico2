@@ -120,11 +120,11 @@ bash code/get_Ancestry.sh Name_Set_plink input/CLG2_Ancestry.tsv Project_folder_
 Example:
 bash code/get_Ancestry.sh CLG2 input/CLG2_Ancestry.tsv CLG2 PATH/CLG2_samples_GT-Seq
 ```
-El script en bash code/get_Ancestry.sh recibe los siguientes 4 argumentos de entrada:
+**El script en bash code/get_Ancestry.sh recibe los siguientes 4 argumentos de entrada:**
 
-**Name_Set_plink:** Nombre o alias que agregará internamente a los nombres de sets en plink que cree.
+**Name_Set_plink:** Nombre o alias que agregará internamente a los nombres de sets en plink que cree la herramienta en las distintas etapas.
 
-**input/CLG2_Ancestry.tsv:**: Archivo input/CLG2_Ancestry.tsv descrito arriba el cual posee la información de la estimación de ancestrías para las 1909 muestras del proyecto Chilegenomico1. La herramienta utiliza estos datos para calcular la diferencia con los datos estimados por ventana y reportarlo en el archivo Summary_ancestry_REF224-RANDOM-SORT_CLG2.csv descrito arriba.
+**input/CLG2_Ancestry.tsv:** Archivo input/CLG2_Ancestry.tsv descrito arriba el cual posee la información de la estimación de ancestrías para las 1909 muestras del proyecto Chilegenomico1. La herramienta utiliza estos datos para calcular la diferencia de las estimaciones de ancestría promedio, contra los datos estimados por ventana y reportarlo en el archivo Summary_ancestry_REF224-RANDOM-SORT_CLG2.csv descrito arriba.
 
 **Project_folder_name:** Nombre de la carpeta con el nombre del proyecto de la ruta "ancestry". En este ejemplo la ruta respectiva es ancestry/CLG2. 
 
