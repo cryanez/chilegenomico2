@@ -28,6 +28,8 @@ ADMIXTURE Version 1.3.0
 
 R
 
+plink
+
 # Estructura de directorios
 
 When downloading the code, you must create the missing "ancestry" and "input" directory, so that the directory structure remains as shown below:
@@ -117,7 +119,10 @@ bash code/get_Ancestry.sh CLG2 input/CLG2_Ancestry.tsv CLG2 PATH/CLG2_samples_GT
 ```
 El script en bash code/get_Ancestry.sh recibe los siguientes 4 argumentos de entrada:
 
-**Name_Set_plink:**
-**input/CLG2_Ancestry.tsv:**
-**Project_folder_name:**
-**Path_set_plink:**
+**Name_Set_plink:** Nombre o alias que agregará internamente a los nombres de sets en plink que cree.
+
+**input/CLG2_Ancestry.tsv:**: Archivo input/CLG2_Ancestry.tsv descrito arriba el cual posee la información de la estimación de ancestrías para las 1909 muestras del proyecto Chilegenomico1. La herramienta utiliza estos datos para calcular la diferencia con los datos estimados por ventana y reportarlo en el archivo Summary_ancestry_REF224-RANDOM-SORT_CLG2.csv descrito arriba.
+
+**Project_folder_name:** Nombre de la carpeta con el nombre del proyecto de la ruta "ancestry". En este ejemplo la ruta respectiva es ancestry/CLG2. 
+
+**Path_set_plink:** Ruta del set en plink con las muestras mestizas chilenas genotipadas por GT-Seq en formato plink binario. 
