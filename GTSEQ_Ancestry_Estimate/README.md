@@ -59,7 +59,7 @@ working_directory
 
 # Descripción de archivos de entrada y de salida
 ## Descripción de archivos de la carpeta "input"
-Los datos de entrada para la estimación de ancestrías por ventanas de la carpeta "input" se deben solicitar al Dr. Ricardo Verdugo, Director del proyecto Chilegenomico, email: raverdugo@uchile.cl o a Cristian Yáñez, Ingeniero Bioinformático, email: cristianyanez@med.uchile.cl. 
+Los datos de entrada para la estimación de ancestrías por ventanas de la carpeta "input" se deben solicitar al Dr. Ricardo Verdugo, Director del proyecto Chilegenomico, email: raverdugo@uchile.cl o a Cristian Yáñez, Ingeniero Bioinformático, email: cristianyanez@med.uchile.cl. Estos datos son nesesarios para ejecutar de forma correcta la herramienta.
 
 La carpeta input contiene los siguientes archivos:
 
@@ -79,6 +79,9 @@ Explicación del contenido de la carpeta "ancestry". Esta carpeta debe ser cread
 En la carpeta ancestry debe existir una carpeta por proyecto o set de datos al que se le estimará la ancestría en ventanas con la herramienta. En este caso tenemos la carpeta "ancestry/CLG2" que hace mención al proyecto Chilegenomico2 (CLG2). Dentro de la carpeta del proyecto deben existir 3 carpetas:
 
 ### Descripción de archivos de la carpeta "ancestry/project/input"
+
+**Estos archivos de la carpeta ancestry/project/ se crean automáticamente de forma interna por la herramienta cuando se ejecuta de forma correcta el programa. Se describen para que el investigador comprenda en contenido de estos archivos los cuales pueden ser de utilidad. **
+
 **CLG2/input:** Contiene el set en formato plink de las muestras 224 muestras referencias (las mismas de inputs/list_REF224.list) más las muestras mestizas chilenas a las que se les estimará las ancestrías con la herramienta (set de miles de muestras mestizas más las referencias). El set contiene los AIMS de las muestras mestizas que fueron genotipados por la técnica GT-Seq (150 AIMS) y que están presentes en más de un 80% de las muestras. Para las muestras referencias se obtienen las que están en común con estos AIMS a través del set inputs/REF224_SORT.{bed,bim.fam}. Este set debe estar ordenado por muestras, dejando las muestras referencias en el mismo orden que inputs/list_REF224.list al inicio y luego las muestras mestizas a las que se les estimará la ancestría.
 
 Esta carpeta CLG2/input también debe contener un archivo tabulado con la información de la población para las muestras (popinfo) denominado: **popinfo_REF224_"NOMBRE PROYECTO".csv**. En el caso del proyecto CLG2 el archivo se denomina:  popinfo_REF224_CLG2.csv. Contiene una fila por muestra en el mismo orden que el set en formato plink al que se le estimará la ancestría por ventanas. Contiene las siguientes 16 columnas. IndID, Sex, Source, Region, Population, Ancestry, AncestryOriginal, IndLab, Recruitment, Reps, AFR, EUR, AYMARA, CHILE_SUR, AMERINDIO. Las últimas 6 columnas son la fracción de ancestría para las muestras. Para las muestras mestizas estas columnas se deben mantener vacías. 
@@ -125,4 +128,4 @@ El script en bash code/get_Ancestry.sh recibe los siguientes 4 argumentos de ent
 
 **Project_folder_name:** Nombre de la carpeta con el nombre del proyecto de la ruta "ancestry". En este ejemplo la ruta respectiva es ancestry/CLG2. 
 
-**Path_set_plink:** Ruta del set en plink con las muestras mestizas chilenas genotipadas por GT-Seq en formato plink binario. 
+**Path_set_plink:** Ruta del set en plink con las muestras mestizas chilenas genotipificadas por GT-Seq en formato plink binario. 
