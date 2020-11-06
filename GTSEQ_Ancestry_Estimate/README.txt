@@ -6,11 +6,23 @@
 # 2020-07-13
 ##########################################################################################
 
+
+
+=Descripción de GTSEQ_Ancestry_Estimate=
+
+GTSEQ_Ancestry_Estimate es una herramienta diseñada en el laboratorio Chilegenomico de la Facultad de Medicina de la Universidad de Chile. Estima la ancestría global de individuos chilenos mestizos utilizando ADMIXTURE. La estimación se realiza en muestras a las que se le genotipificaron 150 Marcadores informativos de la Ancestría (AIMS) chilena mediante la técnica Genotyping-in-Thousands by sequencing (GT-seq) de Nathan R Campbell (2015). En cada corrida se pueden genotipificar miles de muestras por lo que al estimar las ancestrías de un set en formato plink con esta cantidad de muestras chilenas, estás generan su propio componente ancestrál (utilizando el algoritmo no supervisado de ADMIXTURE). Como solución al problema y así estimar de forma adecuanda las ancestrías de muestras chilenas en el proyecto Chilegenomico2 la herramienta divide el set de muestras mestizas en sets de 50 individuos chilenos seleccionados al azar o ventanas de 50 individuos (sin repetir muestras en ventanas), a cada ventana se le agregan 224 muestras de poblaciones que se utilizan como referencia para la estimación de las ancestrías en muestras chilenas.  Existen 4 componentes principales de ancestrías en Chile, estos son el componente africano, europeo, Aymara y del sur de Chile o Mapuche. Se utilizan como muestras referencias 30 africanos, 30 europeos, 110 Aymaras y 54 Mapuches (sumando 224 muestras en total).
+
+El resultado principal de esta herramienta es la ancestría estimada de cada muestra chilena, la cual se reporta en una tabla ordenada por ancestría europea decreciente.
+
+=Requerimientos=
+
 Requirements:
 Bash
 Python2.7
 ADMIXTURE Version 1.3.0 
 R
+
+=Estructura de directorios=
 
 When downloading the code, you must create the missing "ancestry" and "input" directory, so that the directory structure remains as shown below:
 
@@ -35,6 +47,8 @@ When downloading the code, you must create the missing "ancestry" and "input" di
 │   └── REF224_popinfo.csv
 └── README.txt
 
+=Descripción de archivos de entrada y de salida=
+==Descripción de archivos de la carpeta "input"=
 Los datos de entrada para la estimación de ancestrías por ventanas de la carpeta "input" se deben solicitar a Cristian Yáñez, email: cristianyanez@med.uchile.cl. 
 La carpeta input contiene los siguientes archivos:
 
@@ -48,8 +62,7 @@ Las columnas son las siguientes: "ID_Interno", contiene el identificador de las 
 
 *REF224_SORT.{bed,bim.fam}: Set en formato plink de las 224 muestras referencias utilizadas para la estimación de ancestrías. Mismas muestras de list_REF224.list y en el mismo orden. Contienen 628.007 variantes. Para cada set al que se le estima la ancestría por ventanas con esta herramienta, se extraen las variantes en común.
 
-
-
+==Descripción de archivos de la carpeta "ancestry"=
 Explicación del contenido de la carpeta "ancestry". Esta carpeta debe ser creada siguendo las siguientes instrucciones:
 
 En la carpeta ancestry debe existir una carpeta por proyecto o set de datos al que se le estimará la ancestría en ventanas con la herramienta. En este caso tenemos la carpeta "ancestry/CLG2" que hace mencion al proyecto Chilegenomico2 (CLG2). Dentro de la carpeta del proyecto deben existir 3 carpetas:
