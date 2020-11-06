@@ -103,3 +103,7 @@ Esta carpeta CLG2/input también debe contener un archivo tabulado con la inform
 ### Descripción de archivos de la carpeta "ancestry/project/temporal"
 **CLG2/temporal:** Carpeta donde se almacenan datos temporales
 
+
+# Ejecución de herramienta GTSEQ_Ancestry_Estimate para estimar ancestría en miles de individuos por ventanas
+
+
