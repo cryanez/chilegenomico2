@@ -8,7 +8,7 @@
 
 
 
-=Descripción de GTSEQ_Ancestry_Estimate=
+#Descripción de GTSEQ_Ancestry_Estimate
 
 GTSEQ_Ancestry_Estimate es una herramienta diseñada en el laboratorio Chilegenomico de la Facultad de Medicina de la Universidad de Chile. Estima la ancestría global de individuos chilenos mestizos utilizando ADMIXTURE. La estimación se realiza en muestras a las que se le genotipificaron 150 Marcadores informativos de la Ancestría (AIMS) chilena mediante la técnica Genotyping-in-Thousands by sequencing (GT-seq) de Nathan R Campbell (2015). En cada corrida se pueden genotipificar miles de muestras por lo que al estimar las ancestrías de un set en formato plink con esta cantidad de muestras chilenas, estás generan su propio componente ancestrál (utilizando el algoritmo no supervisado de ADMIXTURE). Como solución al problema y así estimar de forma adecuanda las ancestrías de muestras chilenas en el proyecto Chilegenomico2 la herramienta divide el set de muestras mestizas en sets de 50 individuos chilenos seleccionados al azar o ventanas de 50 individuos (sin repetir muestras en ventanas), a cada ventana se le agregan 224 muestras de poblaciones que se utilizan como referencia para la estimación de las ancestrías en muestras chilenas.  Existen 4 componentes principales de ancestrías en Chile, estos son el componente africano, europeo, Aymara y del sur de Chile o Mapuche. Se utilizan como muestras referencias 30 africanos, 30 europeos, 110 Aymaras y 54 Mapuches (sumando 224 muestras en total).
 
