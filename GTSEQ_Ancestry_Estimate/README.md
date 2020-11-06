@@ -18,10 +18,14 @@ El resultado principal de esta herramienta es la ancestría estimada de cada mue
 
 # Requerimientos
 
-Requirements:
+**Requirements:**
+
 Bash
+
 Python2.7
+
 ADMIXTURE Version 1.3.0 
+
 R
 
 # Estructura de directorios
