@@ -12,7 +12,7 @@ Python2.7
 ADMIXTURE Version 1.3.0 
 R
 
-When downloading the code, you must create the missing "ancestry" directory, so that the directory structure remains as shown below:
+When downloading the code, you must create the missing "ancestry" and "input" directory, so that the directory structure remains as shown below:
 
 ├── ancestry
 │   └── CLG2
