@@ -32,6 +32,7 @@ R
 
 When downloading the code, you must create the missing "ancestry" and "input" directory, so that the directory structure remains as shown below:
 ```sh
+working_directory
 ├── ancestry
 │   └── CLG2
 │       ├── input
@@ -106,4 +107,11 @@ Esta carpeta CLG2/input también debe contener un archivo tabulado con la inform
 
 # Ejecución de herramienta GTSEQ_Ancestry_Estimate para estimar ancestría en miles de individuos por ventanas
 
+Asegurese de estar en el directorio de trabajo.
 
+### Ejecute el programa como se indica a continuación:
+```sh
+bash code/get_Ancestry.sh Name_Set_plink input/CLG2_Ancestry.tsv Project_folder_name Path_set_plink
+Example:
+bash code/get_Ancestry.sh CLG2 input/CLG2_Ancestry.tsv CLG2 PATH/CLG2_samples_GT-Seq
+```
